@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/valyala/fasthttp"
+	"github.com/fr-edy/fasthttp"
 )
 
 var (

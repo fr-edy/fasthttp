@@ -8,8 +8,9 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/valyala/fasthttp"
 	"golang.org/x/net/http/httpproxy"
+
+	"github.com/fr-edy/fasthttp"
 )
 
 func TestDialer_GetDialFunc(t *testing.T) {

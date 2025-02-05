@@ -289,7 +289,7 @@ func (c *Cookie) AppendBytes(dst []byte) []byte {
 		dst = append(dst, strCookieMaxAge...)
 		dst = append(dst, '=')
 		if c.maxAge < 0 {
-			// See https://github.com/valyala/fasthttp/issues/1900
+			// See https://github.com/fr-edy/fasthttp/issues/1900
 			dst = AppendUint(dst, 0)
 		} else {
 			dst = AppendUint(dst, c.maxAge)

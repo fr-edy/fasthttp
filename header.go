@@ -2520,7 +2520,7 @@ func (h *ResponseHeader) AppendBytes(dst []byte) []byte {
 
 	// Append Content-Type only for non-zero responses
 	// or if it is explicitly set.
-	// See https://github.com/valyala/fasthttp/issues/28 .
+	// See https://github.com/fr-edy/fasthttp/issues/28 .
 	if h.ContentLength() != 0 || len(h.contentType) > 0 {
 		contentType := h.ContentType()
 		if len(contentType) > 0 {
@@ -3117,7 +3117,7 @@ func (h *ResponseHeader) parseHeaders(buf []byte) (int, error) {
 		// `identity` as a value for `Transfer-Encoding` was removed
 		// in the errata to RFC 2616.
 		// Therefore, we do not include `Transfer-Encoding: identity` in the header.
-		// See: https://github.com/valyala/fasthttp/issues/1909
+		// See: https://github.com/fr-edy/fasthttp/issues/1909
 		h.connectionClose = true
 	}
 	if h.noHTTP11 && !h.connectionClose {

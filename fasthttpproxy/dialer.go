@@ -11,9 +11,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/valyala/fasthttp"
 	"golang.org/x/net/http/httpproxy"
 	"golang.org/x/net/proxy"
+
+	"github.com/fr-edy/fasthttp"
 )
 
 var (

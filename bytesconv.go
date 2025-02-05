@@ -175,7 +175,7 @@ func parseUintBuf(b []byte) (int, int, error) {
 func ParseUfloat(buf []byte) (float64, error) {
 	// The implementation of parsing a float string is not easy.
 	// We believe that the conservative approach is to call strconv.ParseFloat.
-	// https://github.com/valyala/fasthttp/pull/1865
+	// https://github.com/fr-edy/fasthttp/pull/1865
 	res, err := strconv.ParseFloat(b2s(buf), 64)
 	if res < 0 {
 		return -1, errors.New("negative input is invalid")

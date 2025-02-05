@@ -3,7 +3,7 @@ package fasthttp_test
 import (
 	"log"
 
-	"github.com/valyala/fasthttp"
+	"github.com/fr-edy/fasthttp"
 )
 
 func ExampleFS() {

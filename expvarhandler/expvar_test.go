@@ -7,7 +7,7 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/valyala/fasthttp"
+	"github.com/fr-edy/fasthttp"
 )
 
 var once sync.Once

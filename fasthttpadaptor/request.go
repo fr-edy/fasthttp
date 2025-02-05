@@ -7,7 +7,7 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/valyala/fasthttp"
+	"github.com/fr-edy/fasthttp"
 )
 
 // ConvertRequest converts a fasthttp.Request to an http.Request.
@@ -35,7 +35,7 @@ func ConvertRequest(ctx *fasthttp.RequestCtx, r *http.Request, forServer bool) e
 	r.ContentLength = int64(len(body))
 	r.RemoteAddr = ctx.RemoteAddr().String()
 	r.Host = b2s(ctx.Host())
-	r.TLS = ctx.TLSConnectionState()
+	// TODO: Fix this r.TLS = ctx.TLSConnectionState()
 	r.Body = io.NopCloser(bytes.NewReader(body))
 	r.URL = rURL
 

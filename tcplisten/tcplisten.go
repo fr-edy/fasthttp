@@ -18,7 +18,6 @@ package tcplisten
 import (
 	"errors"
 	"fmt"
-	"math"
 	"net"
 	"os"
 
@@ -184,7 +183,8 @@ func safeIntToUint32(i int) (uint32, error) {
 	if i < 0 {
 		return 0, errors.New("value is negative, cannot convert to uint32")
 	}
-	if i > math.MaxUint32 {
+	// Use explicit uint32 type for comparison to avoid overflow on 32-bit platforms
+	if uint64(i) > uint64(^uint32(0)) {
 		return 0, errors.New("value exceeds uint32 max value")
 	}
 	return uint32(i), nil

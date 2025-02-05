@@ -5,8 +5,8 @@ import (
 	"net"
 	"testing"
 
-	"github.com/valyala/fasthttp"
-	"github.com/valyala/fasthttp/fasthttputil"
+	"github.com/fr-edy/fasthttp"
+	"github.com/fr-edy/fasthttp/fasthttputil"
 )
 
 var (
