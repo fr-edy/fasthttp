@@ -604,6 +604,11 @@ type RequestCtx struct {
 	c net.Conn
 	s *Server
 
+	// Schild Protect Additions
+	// TLS Data
+	// TCP Data
+	// IP  Data
+
 	timeoutResponse *Response
 	timeoutCh       chan struct{}
 	timeoutTimer    *time.Timer
